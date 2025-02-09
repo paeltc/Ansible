@@ -1,0 +1,14 @@
+# Contenu du fichier
+
+[Web]
+# Adresse IP du serveur 1
+srv-web-01 ansible_host=192.168.0.27
+
+[Mysql]
+# Adresse IP du serveur 2
+srv-mysql-01 ansible_host=192.168.0.241
+
+[local]
+# Poste de controle
+localhost ansible_connection=local
+

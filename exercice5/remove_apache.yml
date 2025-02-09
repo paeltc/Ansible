@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  become: true              # true use sudo, false do not use sudo
+  tasks:
+
+  - name: update repositury index
+    apt:
+      update_cache: yes     # apt-get update
+      state: latest         # install the latest version
+
+  - name: install apache2 package
+    apt:
+      name: apache2         # apt install apache2
+      state: absent         # remove apache2

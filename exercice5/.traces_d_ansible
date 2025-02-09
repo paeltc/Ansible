@@ -1,0 +1,17 @@
+2025-02-09 17:35:23,063 p=8184 u=deploy n=ansible INFO| PLAY [all] ******************************************************************************************************
+2025-02-09 17:35:23,069 p=8184 u=deploy n=ansible INFO| TASK [Gathering Facts] ******************************************************************************************
+2025-02-09 17:35:23,881 p=8184 u=deploy n=ansible INFO| ok: [localhost]
+2025-02-09 17:35:24,637 p=8184 u=deploy n=ansible INFO| ok: [srv-mysql-01]
+2025-02-09 17:35:24,778 p=8184 u=deploy n=ansible INFO| ok: [srv-web-01]
+2025-02-09 17:35:24,783 p=8184 u=deploy n=ansible INFO| TASK [update repositury index] **********************************************************************************
+2025-02-09 17:35:25,743 p=8184 u=deploy n=ansible INFO| ok: [localhost]
+2025-02-09 17:35:27,507 p=8184 u=deploy n=ansible INFO| changed: [srv-web-01]
+2025-02-09 17:35:28,084 p=8184 u=deploy n=ansible INFO| changed: [srv-mysql-01]
+2025-02-09 17:35:28,087 p=8184 u=deploy n=ansible INFO| TASK [install apache2 package] **********************************************************************************
+2025-02-09 17:35:31,277 p=8184 u=deploy n=ansible INFO| changed: [srv-web-01]
+2025-02-09 17:35:31,591 p=8184 u=deploy n=ansible INFO| changed: [srv-mysql-01]
+2025-02-09 17:35:31,969 p=8184 u=deploy n=ansible INFO| changed: [localhost]
+2025-02-09 17:35:31,970 p=8184 u=deploy n=ansible INFO| PLAY RECAP ******************************************************************************************************
+2025-02-09 17:35:31,970 p=8184 u=deploy n=ansible INFO| localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-02-09 17:35:31,970 p=8184 u=deploy n=ansible INFO| srv-mysql-01               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-02-09 17:35:31,970 p=8184 u=deploy n=ansible INFO| srv-web-01                 : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
