@@ -1,0 +1,21 @@
+# deploy.yaml
+
+---
+- name: "Apache installation avec Docker"
+  hosts: prod
+  become: true
+  vars_files:
+    - ./vars/secret-variables.yaml
+  pre_tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+  tasks:
+    - name : Create Apache container
+      community.docker.docker_container:
+        name: webapp
+        image: httpd
+        ports:
+            - "80:80"

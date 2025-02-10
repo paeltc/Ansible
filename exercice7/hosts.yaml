@@ -1,0 +1,14 @@
+# hosts.yaml
+
+---
+
+all:
+  vars:
+    # ansible_ssh_common_args: 'StrictHostKeyChecking=no'
+  hosts:
+    control:
+      ansible_connection: local
+prod:
+  hosts:
+    srv-web-01:
+       ansible_host: 192.168.0.27
